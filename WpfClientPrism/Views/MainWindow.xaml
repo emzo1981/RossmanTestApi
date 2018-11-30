@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfClientPrism.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="{Binding Title}"
+        WindowStartupLocation="CenterScreen"
+        Height="340.333"
+        Width="541.334">
+    <Grid>
+        <Button Content="Send"
+                HorizontalAlignment="Left"
+                Margin="268,0,0,18"
+                Command="{Binding SendCommand, Mode=OneWay}"
+                Width="76"
+                Height="20"
+                VerticalAlignment="Bottom" />
+        <DataGrid Margin="12,10,16,60"
+                  Name="dgvProductList"
+                  ItemsSource="{Binding Path=Products, IsAsync=True}" />
+        <TextBox HorizontalAlignment="Left"
+                 Height="22"
+                 Margin="70,0,0,18"
+                 TextWrapping="Wrap"
+                 Text="{Binding Skip, Mode=TwoWay}"
+                 VerticalAlignment="Bottom"
+                 Name="txtSkip"
+                 Width="62" />
+        <TextBox Margin="183,0,0,17"
+                 TextWrapping="Wrap"
+                 Text="{Binding Take, Mode=TwoWay}"
+                 Name="TxtTake"
+                 Height="22"
+                 VerticalAlignment="Bottom"
+                 HorizontalAlignment="Left"
+                 Width="62" />
+        <Label Content="Take"
+               HorizontalAlignment="Left"
+               Margin="141,0,0,19"
+               VerticalAlignment="Bottom"
+               Height="25" />
+        <Label Content="Skip"
+               HorizontalAlignment="Left"
+               Margin="23,0,0,17"
+               Height="26"
+               VerticalAlignment="Bottom" />
+
+    </Grid>
+</Window>
