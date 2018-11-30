@@ -2,10 +2,10 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:prism="http://prismlibrary.com/"
-        prism:ViewModelLocator.AutoWireViewModel="True"      
+        prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}"
         WindowStartupLocation="CenterScreen"
-        Height="340.333"
+        Height="374.366"
         Width="541.334">
     <!--<Window.Resources>
         <ResourceDictionary>
@@ -19,23 +19,23 @@
     <Grid>
         <Button Content="Send"
                 HorizontalAlignment="Left"
-                Margin="268,0,0,18"
+                Margin="266,0,0,52"
                 Command="{Binding SendCommand, Mode=OneWay}"
                 Width="76"
                 Height="20"
                 VerticalAlignment="Bottom" />
-        <DataGrid Margin="12,10,16,60"
+        <DataGrid Margin="12,10,16,95"
                   Name="dgvProductList"
                   ItemsSource="{Binding Path=Products, IsAsync=True}" />
         <TextBox HorizontalAlignment="Left"
                  Height="22"
-                 Margin="70,0,0,18"
+                 Margin="68,0,0,52"
                  TextWrapping="Wrap"
                  Text="{Binding Skip, Mode=TwoWay}"
                  VerticalAlignment="Bottom"
                  Name="txtSkip"
                  Width="62" />
-        <TextBox Margin="183,0,0,17"
+        <TextBox Margin="181,0,0,51"
                  TextWrapping="Wrap"
                  Text="{Binding Take, Mode=TwoWay}"
                  Name="TxtTake"
@@ -45,14 +45,25 @@
                  Width="62" />
         <Label Content="Take"
                HorizontalAlignment="Left"
-               Margin="141,0,0,19"
+               Margin="139,0,0,53"
                VerticalAlignment="Bottom"
                Height="25" />
         <Label Content="Skip"
                HorizontalAlignment="Left"
-               Margin="23,0,0,17"
+               Margin="21,0,0,51"
                Height="26"
                VerticalAlignment="Bottom" />
+        <Label Content="Error : "
+               HorizontalAlignment="Left"
+               Margin="22,0,0,18"
+               VerticalAlignment="Bottom"
+               Height="25" />
+        <Label 
+               HorizontalAlignment="Left"
+               Margin="71,0,0,13"
+               VerticalAlignment="Bottom"
+               Content="{Binding Error, Mode=TwoWay}"
+               Height="25" />
 
     </Grid>
 </Window>

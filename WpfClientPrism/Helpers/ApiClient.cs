@@ -21,6 +21,10 @@ namespace WpfClientPrism.Services
         public async Task<T> GetAsync<T>(Uri requestUrl)
         {
             var response = await _httpClient.GetAsync(requestUrl, HttpCompletionOption.ResponseHeadersRead);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception(response.ReasonPhrase);
+            }
             response.EnsureSuccessStatusCode();
             var data = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject< T>(data);

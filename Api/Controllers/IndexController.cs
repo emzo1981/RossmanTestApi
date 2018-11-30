@@ -24,7 +24,7 @@ namespace TestApi.Controllers
         /// <summary>
         /// Gets products from the range
         /// </summary>
-        /// <param name="skip">products strats from </param>            
+        /// <param name="skip">products starts from </param>            
         /// <param name="take">products taken</param>    
         [HttpGet]
         [Route("api/products")]
