@@ -2,11 +2,20 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:prism="http://prismlibrary.com/"
-        prism:ViewModelLocator.AutoWireViewModel="True"
+        prism:ViewModelLocator.AutoWireViewModel="True"      
         Title="{Binding Title}"
         WindowStartupLocation="CenterScreen"
         Height="340.333"
         Width="541.334">
+    <!--<Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Styles.xaml" />
+                <ResourceDictionary Source="/MES.Infrastructure;component/Styles/DataGridRowStatusStyles.xaml" />
+                <ResourceDictionary Source="/MES.Infrastructure;component/Styles/CommonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>-->
     <Grid>
         <Button Content="Send"
                 HorizontalAlignment="Left"

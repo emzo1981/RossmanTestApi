@@ -58,6 +58,10 @@
     </ApplicationDefinition>
     <Compile Include="Helpers\ApiClient.cs" />
     <Compile Include="Helpers\IApiClient.cs" />
+    <Page Include="Styles\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -102,5 +106,6 @@
     </PackageReference>
     <PackageReference Include="Prism.Unity" Version="7.1.0.431" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
