@@ -39,8 +39,16 @@ namespace TestApi.Controllers
             {
                 return BadRequest($"take parameter can't be empty");
             }
-
-            var apiResponse = await _dataRepository.GetProducts(skip, take);
+            ProductsResponse apiResponse = null;
+            try
+            {
+                apiResponse = await _dataRepository.GetProducts(skip, take);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            
             if (apiResponse.IsError)
             {
                 return BadRequest(apiResponse.IsError);

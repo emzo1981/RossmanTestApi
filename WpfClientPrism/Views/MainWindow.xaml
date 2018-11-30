@@ -26,6 +26,9 @@
                 VerticalAlignment="Bottom" />
         <DataGrid Margin="12,10,16,95"
                   Name="dgvProductList"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  SelectionUnit="FullRow"
                   ItemsSource="{Binding Path=Products, IsAsync=True}" />
         <TextBox HorizontalAlignment="Left"
                  Height="22"

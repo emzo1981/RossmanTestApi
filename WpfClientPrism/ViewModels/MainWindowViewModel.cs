@@ -50,6 +50,8 @@ namespace WpfClientPrism.ViewModels
         {
             get { return _skip; }
             set {
+                if (value < 0)
+                    value = 0;
                 SetProperty(ref _skip, value);
             }
         }
@@ -58,7 +60,10 @@ namespace WpfClientPrism.ViewModels
         public int Take
         {
             get { return _take; }
-            set { SetProperty(ref _take, value); }
+            set {
+                if (value < 0)
+                    value = 0;
+                SetProperty(ref _take, value); }
         }
         private string _title = "Rossman test aplication - Wpf MVVM Client";
         public string Title

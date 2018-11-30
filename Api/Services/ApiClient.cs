@@ -23,7 +23,7 @@ namespace TestApi.Services
             var response = await _httpClient.GetAsync(requestUrl, HttpCompletionOption.ResponseHeadersRead);
             response.EnsureSuccessStatusCode();
             var data = await response.Content.ReadAsStringAsync();
-            return JsonConvert.DeserializeObject< T>(data);
+            return JsonConvert.DeserializeObject<T>(data);
         }
         public Uri CreateRequestUri(string relativePath, string queryString = "")
         {
