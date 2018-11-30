@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TestApi.Models;
 
-namespace Api.Responses
+namespace Api.Models
 {
     public class ProductListResult
     {

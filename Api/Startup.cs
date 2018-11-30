@@ -72,9 +72,7 @@ namespace TestApi
             }
             AutoMapper.Mapper.Initialize(cfg =>
             {
-                cfg.CreateMap<Product, ProductDto>()
-                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
-                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name));
+                cfg.CreateMap<Product, ProductDto>();        
             });
             app.UseHttpsRedirection();
             app.UseMvc();

@@ -1,4 +1,4 @@
-﻿using Api.Responses;
+﻿using Api.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +19,7 @@ namespace TestApi.Responses
         public IEnumerable<string> Warnings { get; set; }
         public IEnumerable<string> Infos { get; set; }
         public IEnumerable<string> Successes { get; set; }
+        public IEnumerable<Link> RelativeLinks { get; set; }
 
 
 
